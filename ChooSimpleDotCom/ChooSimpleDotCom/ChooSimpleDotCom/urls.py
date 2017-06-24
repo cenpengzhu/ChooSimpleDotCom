@@ -4,10 +4,14 @@ Definition of urls for ChooSimpleDotCom.
 
 from datetime import datetime
 from django.conf.urls import url
+from django.conf import settings  
 import django.contrib.auth.views
+from django.conf.urls import include
+from django.contrib import admin
 
 import app.forms
 import app.views
+
 
 # Uncomment the next lines to enable the admin:
 # from django.conf.urls import include
@@ -19,6 +23,7 @@ urlpatterns = [
     url(r'^$', app.views.home, name='home'),
     url(r'^contact$', app.views.contact, name='contact'),
     url(r'^about', app.views.about, name='about'),
+    url(r'^timeline$',app.views.timeline, name='timeline'),   
     url(r'^login/$',
         django.contrib.auth.views.login,
         {
@@ -39,8 +44,13 @@ urlpatterns = [
         name='logout'),
 
     # Uncomment the admin/doc line below to enable admin documentation:
-    # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
+    url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-    # url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/', include(admin.site.urls)),
 ]
+
+
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+ 
+urlpatterns += staticfiles_urlpatterns()
