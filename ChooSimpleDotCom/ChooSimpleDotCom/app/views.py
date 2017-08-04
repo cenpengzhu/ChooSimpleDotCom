@@ -4,8 +4,12 @@ Definition of views.
 
 from django.shortcuts import render
 from django.http import HttpRequest
+from django.http import HttpResponse
 from django.template import RequestContext
 from datetime import datetime
+from app.models import timelineThing
+from django.forms.models import model_to_dict
+import json
 
 def home(request):
     """Renders the home page."""
@@ -57,3 +61,21 @@ def timeline(request):
             'year':datetime.now().year,
         }
     )
+
+def querytimelineitem(request):
+    """response the querytimelineitem request."""
+    assert isinstance(request, HttpRequest)
+    firstItem = request.POST.get('QueryBegin');
+    lastItem = request.POST.get('QueryEnd');
+    
+    firstItem = 1;
+    lastItem = 2;
+    QueryResult = {};
+
+    i = firstItem;
+    while(i <= lastItem ) :
+        QueryResult['result'+str(i)] = timelineThing.objects.get(id = i).to_dict();
+        i += 1;
+
+    ResponseJson = json.dumps(QueryResult);
+    return HttpResponse(ResponseJson);

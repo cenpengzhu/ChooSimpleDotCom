@@ -40,3 +40,12 @@ input[type="checkbox"].input-validation-error {
 .validation-summary-valid {
     display: none;
 }
+
+#timeline-section {
+	border: 1px solid #b94a48;
+	background-color: #808080;
+}
+.timelinething-div {
+	border: 1px solid #b94a48;
+	background-color:aquamarine;
+}

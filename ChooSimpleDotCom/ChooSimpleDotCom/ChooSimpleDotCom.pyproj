@@ -55,6 +55,7 @@
     <Folder Include="ChooSimpleDotCom\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\templates\app\RainyWindow.html" />
     <Content Include="app\templates\app\timeline.html" />
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />

@@ -24,6 +24,7 @@ urlpatterns = [
     url(r'^contact$', app.views.contact, name='contact'),
     url(r'^about', app.views.about, name='about'),
     url(r'^timeline$',app.views.timeline, name='timeline'),   
+    url(r'^querytimelineitem$',app.views.querytimelineitem,name='querytimelineitem'),
     url(r'^login/$',
         django.contrib.auth.views.login,
         {

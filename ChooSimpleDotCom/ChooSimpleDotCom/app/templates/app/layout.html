@@ -11,6 +11,11 @@
 </head>
 
 <body>
+    <style>
+        .jumbotron{
+	        background:url(../../static/jumbotronbk.jpg);
+        }
+    </style>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -29,6 +34,27 @@
                 </ul>
                 {% include 'app/loginpartial.html' %}
             </div>
+        </div>
+    </div>
+
+    <div class="jumbotron" >
+        <div class="container-fluid" id="SelfInFormation">
+            <div class="row">
+                <div class="col-md-2">
+                </div>
+                <div class="col-md-3" id="SelfHeadImage">
+                    <img src="../../static/choosimplehead.jpg" alt="Head">
+                </div>
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-4" id="SelfInFormations">
+                    <h2>ChooSimple</h2>
+                    <p>Email:<a href="mailto:cenpeng.zhu@gmail.com">cenpeng.zhu@gmail.com</a></p>
+                    <p>Bilibili:拿着方便面</p>           
+                </div>
+                <div class="col-md-2">
+                </div>
+             </div>
         </div>
     </div>
 

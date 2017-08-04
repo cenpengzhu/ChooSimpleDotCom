@@ -11,3 +11,12 @@ class timelineThing(models.Model) :
     datetime = models.DateField();
     content = models.URLField(max_length = 500);
     status = models.IntegerField();
+
+    def to_dict(self) :
+        dict = {}
+        dict['title'] = getattr(self, 'title');
+        dict['description'] = getattr(self, 'description');
+        dict['datetime'] = str(getattr(self, 'datetime'));
+        dict['content'] = getattr(self, 'content');
+        dict['status'] = getattr(self, 'status');\
+        return dict;
