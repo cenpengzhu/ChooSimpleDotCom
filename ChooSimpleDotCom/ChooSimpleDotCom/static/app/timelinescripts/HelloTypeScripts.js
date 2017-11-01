@@ -8,4 +8,3 @@ class GirlFriend {
 }
 let MyGirlFriend = new GirlFriend("ChooSimple");
 MyGirlFriend.TellHeartWords();
-//# sourceMappingURL=HelloTypeScripts.js.map

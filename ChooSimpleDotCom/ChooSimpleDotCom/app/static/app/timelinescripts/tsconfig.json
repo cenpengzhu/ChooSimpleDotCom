@@ -2,11 +2,10 @@
     "compilerOptions": {
         "target": "es6",
         "module": "commonjs",
-        "sourceMap":true
+        "noImplicitAny":false,
+        "sourceMap":false,
+        "outDir":"./"
     },
     "exclude": [
-        "node_modules",
-        "typings/main",
-        "typings/main.d.ts"
     ]
 }

@@ -1,6 +1,12 @@
 {% extends "app/layout.html" %}
+{% load staticfiles %}
 
 {% block content %}
 <section id="timeline-section" class="" >
 </section>
+<button id="RequestButton">Request</button>
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'app/timelinescripts/TimeLineScripts.js' %}"></script>
 {% endblock %}
